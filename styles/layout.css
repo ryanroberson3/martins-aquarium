@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: #0074D9;
+    color: #fff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Main Layout */
+main.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left (2/3 width), Right (1/3 width) */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Left Column (Fish + Locations) */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Column (Tips) */
+.tips-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tips-container h2 {
+    margin-bottom: 10px;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.tips ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.tips li {
+    margin-bottom: 10px;
+}
+
+.tips .tip_topic {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Fish and Locations Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main.content {
+        grid-template-columns: 1fr;
+    }
+}
+
+
