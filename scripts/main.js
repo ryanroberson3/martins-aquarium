@@ -2,7 +2,7 @@ import { fishList } from './fishList.js'
 import { tipList } from './tipList.js'
 import { locationList } from './locationList.js'
 import { holyFish } from './holyFish.js'
-import { soldierFish, soldierFish } from './soldierFish.js'
+import { soldierFish } from './soldierFish.js'
 import { regularFish } from './regularFish.js'
 
 const hFish = holyFish()
@@ -12,6 +12,8 @@ const rFish = regularFish()
 const hFishHTML = fishList(hFish);
 const sFishHTML = fishList(sFish);
 const rFishHTML = fishList(rFish);
+
+const fishHTML = hFishHTML + sFishHTML + rFishHTML;
 
 // Generate the care tips
 const tipHTML = tipList()
